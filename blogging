@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Blog</title>
+</head>
+<body>
+    <h1>My Blog</h1>
+    <input type="text" id="title" placeholder="Blog Title">
+    <textarea id="content" placeholder="Write your blog post..."></textarea>
+    <button onclick="postBlog()">Post</button>
+    <div id="blogPosts"></div>
+    <script>
+        function postBlog() {
+            let title = document.getElementById("title").value;
+            let content = document.getElementById("content").value;
+            let post = document.createElement("div");
+            post.innerHTML = `<h2>${title}</h2><p>${content}</p>`;
+            document.getElementById("blogPosts").appendChild(post);
+        }
+    </script>
+</body>
+</html>
